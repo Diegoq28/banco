@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+
+    <script src="/js/actualizar.js"></script>
+    <script src="/js/eliminar.js"></script>
+    <title>consulta usuarios</title>
+    <link rel="stylesheet" href="/css/consultaus.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="cerrar" href="cerrar">Cerrar Sesion</a>
+        </nav>
+    </header>
+    <h1>Usuarios</h1>
+    <form action="/frminserta" method="POST" class="ingreso">
+    <aside>Documento</aside><input type="text" name="us_doccli" value="">
+    <aside>Usuario</aside><input type="text" name="us_nom" value="">
+    <aside>Clave</aside><input type="text" name="us_clave" value="">
+    <aside>Rol</aside><input type="text" name="us_rol" value="">
+    <aside>Estado</aside><input type="text" name="us_estado" value="">
+    <aside>Imagen</aside><input type="text"name="us_imagen" value="">
+    <br>
+    <input type="submit" value="insertar" >
+    </form>
+    <form class="resultado" name=""  >
+        <table>
+            <thead>
+                <tr>
+                    <th>Documento</th>
+                    <th>Usuario</th>
+                    <th>Clave</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Imagen</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>    
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu" >
+                    <td><input type="text" value="<%=datos.us_doccli%>" name="doccli" id="" class="doccli" readonly></td>
+                    <td><input type="text" value="<%=datos.us_nom%>" name="nomusu" id="" class="nomusu"></td>
+                    <td><input type="text" value="<%=datos.us_clave%>" name="clave" id="" class="clave"></td>
+                    <td><input type="text" value="<%=datos.us_rol%>" name="rol" id="" class="rol"></td>
+                    <td><input type="text" value="<%=datos.us_estado%>" name="estado" id="" class="estado"></td>
+                    <td><input type="text" value="<%=datos.us_imagen%>" name="imagen" id="" class="imagen"></td>
+                    <td><input type="submit" value="actualizar" name="actualizar" id="botonac" class="botonac"></td>
+                    <td><input type="submit" value="eliminar" name="eliminar" id="btneli" class="btneli"></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>

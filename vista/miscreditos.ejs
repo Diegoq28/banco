@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consulta usuarios</title>
+    <link rel="stylesheet" href="/css/credito.css">    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/clientes">inicio</a>
+            <a class="cerrar" href="cerrar">Cerrar Sesion</a>
+        </nav>
+    </header>
+    <h1>mis creditos </h1>
+
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr>
+                    <th class="www">Documento</th>
+                    <th class="www">Codigo del credito</th>
+                    <<th class="www">numero de linea</th>
+                    <th class="www">moto total del credito</th>
+                    <th class="www">fecha de solicitis del credito</th>
+                    <th class="www">Plazo maximo del credito</th> 
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="button" value="<%=datos.us_doccli%>" name="doccli" id="" class=""></td>
+                    <td><input type="button" value="<%=datos.cre_codigo%>" name="crecodigo id="" class=""></td>
+                    <td><input type="button" value="<%=datos.cre_codlinea %>" name="codlinea" id="" class=""></td>
+                    <td><input type="button" value="<%=datos.montoprestado%>" name="montop id="" class=""></td>
+                    <td><input type="button" value="<%=datos.cre_fechaapro%>" name="fechacredito" id="" class=""></td>
+                    <td><input type="button" value="<%=datos.plazo%>" name="plazo id="" class=""></td>
+                </tr>
+
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>

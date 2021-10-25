@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    background-color:#c8c4c4;
+}
+
+div{
+    margin: 50px;
+    padding: 1px;
+    border:rgb(21, 190, 190) 5px solid;
+    text-align: center;
+
+}
+
+a{
+    padding: auto;
+    font-size: 20px;
+    display:inline-block;
+    margin: 4px;
+    border: 2px black solid;
+    width:  90%;
+
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/actualizarcredito.js"></script>
+    <script src="/js/eliminarcredito.js"></script>
+    <link rel="stylesheet" href="/css/credito.css">
+    <title>Consulta Creditos</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="consultalinea">lineas de credito</a>
+            <a href="consultacredito">creditos<a>
+            <a href="consultacliente">cliente</a>
+            <a class="cerrar" href="cerrar">Cerrar Sesion</a>
+        </nav>
+    </header>
+    <h1>Creditos</h1>
+    <form action="/frminsertarcre" method="POST" class="ingreso">
+    <aside>Codigo Credito</aside><input type="text" name="cre_codigo" value="">
+    <aside>Documento cliente</aside><input type="text" name="cre_doccli" value="">
+    <aside>Codigo linea de credito</aside><input type="text" name="cre_codlinea" value="">
+    <aside>Monto del prestamo</aside><input type="number" name="montoprestado" value="">
+    <aside>Fecha de aprobacion</aside><input type="date" name="cre_fechaapro" value="">
+    <aside>Palzo</aside><input type="number"name="plazo" value="">
+    <br>
+    <input type="submit" value="ingresar">
+    </form>
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr>
+                    <th>coodigo credito</th>
+                    <th>domumento </th>
+                    <th>linea de credito</th>
+                    <th>monto del prestamo</th>
+                    <th>fecha de aprobacion</th>
+                    <th>plazo</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="text" value="<%=datos.cre_codigo%>" name="" id="" class="codigo"></td>
+                    <td><input type="text" value="<%=datos.cre_doccli%>" name="" id="" class="doc" readonly></td>
+                    <td><input type="text" value="<%=datos.cre_codlinea%>" name="" id="" class="codli"readonly></td>
+                    <td><input type="text" value="<%=datos.montoprestado%>" name="" id="" class="monto"></td>
+                    <td><input type="text" value="<%=datos.cre_fechaapro%>" name="" id="" class="fecha"></td>
+                    <td><input type="text" value="<%=datos.plazo%>" name="" id="" class="plazo"></td>
+                    <td><input type="submit" value="actualizar" name="actualizar" id="" class="btnact"></td>
+                    <td><input type="submit" value="eliminar" name="eliminar" id="" class="btnel"></td>
+
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>

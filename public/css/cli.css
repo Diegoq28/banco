@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Castoro', serif;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.titulo{
+    color: rgb(43, 46, 226);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1cb5e0a9, #000046a9),url(/WhatsApp\ Image\ 2021-06-24\ at\ 4.21.51\ PM.jpeg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+
+}
+
+nav > a{
+    color: #ffffff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textosheader{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textosheader h1{
+    font-size: 50px;
+    color: #ffffff;
+
+}
+
+.textosheader h2{
+    font-size: 50px;
+    font-weight: 300;
+    color: #ffffff;
+    
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.imagen-abaut{
+    width: 48%;
+
+}
+
+.contenedor-sobre-nosotros .contenido-texto{
+    width: 48%;
+}
+
+.contenido-texto h3{
+    margin-bottom: 15px;
+}
+
+.contenido-texto h3 span{
+    background: rgb(43, 46, 226);
+    color:#ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-texto p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.portafolio{
+    background: #f2f2f2;
+
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: wrap;
+}
+
+.imagen-port{
+    width: 24%;
+    height: 200px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow:0 0 6px rgba(0, 0, 0, .5);
+
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    
+}
+
+.hover-galeria{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    transform: scale(0);
+    background: hsla(270,71%,47%,0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 100px;
+
+}
+
+.hover-galeria p{
+    color: #ffffff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform:scale(1) ;
+}
+
+footer{
+    width: 100%;
+    height:200px;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1cb5e0a9, #000046a9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+
+.contenedor-fotter{
+    margin-bottom: 15px;
+}
+
+.content-foo{
+    text-align: center;
+
+}
+
+.content-foo img{
+    display: inline-block;
+height: 100%;
+width: 50px;
+
+
+}
+
+
+.content-foo p{
+    margin: 0;
+    font-weight: 300;
+
+}
+
+.titulo-final {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+

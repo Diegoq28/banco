@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/actualizarlineacre.js"></script>
+    <script src="/js/eliminalineacre.js"></script>
+    <title>consulta usuarios</title>
+    <link rel="stylesheet" href="/css/credito.css">    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="consultacliente">cliente</a>
+            <a class="cerrar" href="cerrar">Cerrar Sesion</a>
+        </nav>
+    </header>
+    <h1>Linea de credito </h1>
+    <form action="/frmlinea" method="POST" class="ingreso">
+    <aside>lin_codigo</aside><input type="text" name="codigo" value="">
+    <aside>lin_nom</aside><input type="text" name="nom" value="">
+    <aside>lin_montoxcredito</aside><input type="text" name="monto" value="">
+    <aside>lin_plazoxcred</aside><input type="text" name="plazo" value="">
+    
+    <br>
+    <input type="submit" value="insertar" >
+    </form>
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr>
+                    <th>lin_codigo</th>
+                    <th>lin_nom</th>
+                    <th>lin_montoxcredito</th>
+                    <th>lin_plazoxcred</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>    
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="text" value="<%=datos.lin_codigo%>" name="" id="" class="codigo"readonly></td>
+                    <td><input type="text" value="<%=datos.lin_nom%>" name="" id="" class="nombre"></td>
+                    <td><input type="text" value="<%=datos.lin_montoxcredito%>" name="" id="" class="mxc"></td>
+                    <td><input type="text" value="<%=datos.lin_plazoxcred%>" name="" id="" class="pxc"></td>
+                    <td><input type="submit" value="actualizar" name="actualizar" id="" class="btnact"></td>
+                    <td><input type="submit" value="eliminar" name="eliminar" id="" class="btnel"></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>

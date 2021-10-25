@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/clientes.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/actucliente.js"></script>
+    <script src="/js/eliminacliente.js"></script>
+    <title>Consulta Clientes</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="consultacredito">creditos<a>
+            <a href="consultacliente">cliente</a>
+            <a href="consultalinea">lineas de credito</a>
+            <a class="cerrar" href="cerrar">Cerrar Sesion</a>
+        </nav>
+    </header>
+    <h1>Clientes</h1>
+    <form action="/frminsertarcliente" method="POST" class="ingreso">
+    <aside>Documento</aside><input type="text" name="Documento" value="">
+    <aside>Nombre</aside><input type="text" name="Nombre" value="">
+    <aside>Apellido</aside><input type="text" name="Apellido" value="">
+    <aside>Correo</aside><input type="email" name="Correo" value="">
+    <aside>Celular</aside><input type="text" name="Celular" value="">
+    <aside>Sexo</aside><input type="text"name="Sexo" value="">
+    <aside>Fecha de nacimiento</aside><input type="date"name="Fecha" value="">
+
+    <br>
+    <input type="submit" value="ingresar">
+    </form>
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr>
+                    <th>Documento</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Celular</th>
+                    <th>Sexo</th>
+                    <th>Fecha de nacimiento</th>    
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="text" value="<%=datos.cli_doc%>" name="" id="" class="docc"></td>
+                    <td><input type="text" value="<%=datos.cli_nom%>" name="" id="" class="nomc"></td>
+                    <td><input type="text" value="<%=datos.cli_apell%>" name="" id="" class="apec"></td>
+                    <td><input type="text" value="<%=datos.cli_correo%>" name="" id="" class="correoc"></td>
+                    <td><input type="text" value="<%=datos.cli_cel%>" name="" id="" class="celc"></td>
+                    <td><input type="text" value="<%=datos.cli_sexo%>" name="" id="" class="sexoc"></td>
+                    <td><input type="text" value="<%=datos.cli_fechainicio%>" name="" id="" class="fechac"></td>
+                    <td><input type="submit" value="actualizar" name="actualizar" id="" class="btnact"></td>
+                    <td><input type="submit" value="eliminar" name="eliminar" id="" class="btneli"></td>
+
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>
